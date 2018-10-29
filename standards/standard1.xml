@@ -1,0 +1,303 @@
+﻿<?xml version="1.0"?>
+<standard>
+    <name>OWASP.org Application Security Verification Standard 3.0.1</name>
+    <initialcheck>
+		<name>Определение уровня верификации</name>
+		<description>Ответьте на эти вопросы, чтобы быстро определить уровень верификации ASVS (ASVS verifictation level), который требуется для вашего веб-приложения.</description>
+        <numberofquestions>9</numberofquestions>
+        <question no="1">
+            <text>Будет ли иметь ваше веб-приложение функцию регистрации, аутентификации и авторизации пользователей?</text>
+			<info>Пример</info>
+            <level>2</level>
+            <measurearea>2</measurearea>
+        </question>
+        <question no="2">
+            <text>Планируется ли использование файлов cookie для хранения данных на клиентских устройствах или временных сеансов?</text>
+			<info>Пример</info>
+            <level>2</level>
+			<measurearea>3</measurearea>
+        </question>
+        <question no="3">
+            <text>Будут ли некоторые функции вашего приложения доступны только определенным пользователям и/или будет ли ваше приложение обеспечивать возможность коммуникации между пользователями?</text>
+			<info>Пример</info>
+            <level>2</level>
+			<measurearea>4</measurearea>
+        </question>
+        <question no="4">
+            <text>Планируется ли использование форм ввода?</text>
+			<info>Пример</info>
+            <level>1</level>
+			<measurearea>5</measurearea>
+        </question>
+        <question no="5">
+            <text>Будут ли поддерживаться REST-сервисы?</text>
+			<info>Пример</info>
+            <level>1</level>
+			<measurearea>15</measurearea>
+        </question>
+		<question no="6">
+            <text>Могут ли пользователи получать данные о произошедших ошибках в ходе эксплуатации веб-приложения?</text>
+			<info>Пример</info>
+            <level>1</level>
+			<measurearea>7</measurearea>
+        </question>
+		<question no="7">
+            <text>Будет ли веб-приложение поддерживать денежные транзакции?</text>
+			<info>Пример</info>
+            <level>2</level>
+			<measurearea>6</measurearea>
+        </question>
+		<question no="8">
+            <text>Ожидается обработка больших денежных транзакций? (Выберите "нет", если на предыдущий вопрос вы ответили отрицательно.)</text>
+			<info>Пример</info>
+            <level>3</level>
+			<measurearea>6</measurearea>
+        </question>
+		<question no="9">
+            <text>Планируется ли поддержка мобильных устройств?</text>
+			<info>Пример</info>
+            <level>1</level>
+			<measurearea>14</measurearea>
+        </question>
+    </initialcheck>
+    
+    <levels>
+		<name>Уровни верификации</name>
+		<description>Ниже представлены уровни верификации ASVS (ASVS verifictation level) для веб-приложений. Выберите один из них, чтобы продолжить и получить список мер безопасности, которые наиболее релевантны для вашего веб-приложения.</description>
+		<info>В этом списке уже выбран наиболее подходящий уровень верификации, согласно полученным ответам. Вы можете изменить уровень, если считаете это нужным.</info>
+		<numberoflevels>3</numberoflevels>
+        <level no="1">
+            <name>OWASP Level 1 Application. Простое веб-приложение, доступное с сети Интернет.</name>
+        </level>
+        <level no="2">
+            <name>OWASP Level 2 Application. Веб-приложение, оперирующее личной, необязательно конфиденциальной, информацией пользователей и денежными транзакциями малого объема.</name>
+        </level>
+        <level no="3">
+            <name>OWASP Level 3 Application. Веб-приложение, оперирующее большими объемами конфиденциальной информации пользователей (имена, адреса, телефоны), чувствительной информацией (корпортивная/государственная тайна, номера паспортов и других документов), подробными медицинскими данными, денежными транзакциями большого объема и/или связанное с безопасностью жизни людей.</name>
+        </level>
+    </levels>
+	
+	<areas>
+		<name>Области требования безопасности</name>
+		<description>Ниже представлены области требований безопасности. Выберите нужные и нажмите продолжить, чтобы получить список средств контроля безопасности (security measures).</description>
+		<info>В этом списке уже выбраны наиболее подходящие области требований безопасности, согласно полученным ответам. Вы можете выбрать еще дополнительные, если считаете это нужным.</info>
+		<name2>Контрольный список</name2>
+		<description2>Исходя из полученных данных, были выбраны следующие средства контроля безопасности (security measures). Проверьте, все ли они подходят для вашего проекта. Если вы считаете, что средство контроля можно пропустить, снимите галочку.</description2>
+		<numberofareas>16</numberofareas>
+		<area no="1">
+			<name>V1. Архитектура, проектирование и моделирование угроз</name>
+			<mandatory>yes</mandatory>
+			<numberofmeasures>2</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>1.1. Verify that all application components are identified and are known to be needed.</description>
+				</measure>
+				<measure no="2">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>1.2. Example.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="2">
+			<name>V2. Аутентификация</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>2.1. Verify all pages and resources by default require authentication except those specifically intended to be public (Principle of complete mediation).</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="3">
+			<name>V3. Управление сеансами</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>3.1. Verify that there is no custom session manager, or that the custom session manager is resistant against all common session management attacks.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="4">
+			<name>V4. Контроль доступа</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>4.1. Verify that the principle of least privilege exists - users should only be able to access functions, data files, URLs, controllers, services, and other resources, for which they possess specific authorization. This implies protection against spoofing and elevation of privilege.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="5">
+			<name>V5. Обработка вредоносного ввода</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>5.1. Verify that the runtime environment is not susceptible to buffer overflows, or that security controls prevent buffer overflows.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="6">
+			<name>V7. Криптография в состоянии покоя</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>7.1. Verify that all cryptographic modules fail securely, and errors are handled in a way that does not enable oracle padding.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="7">
+			<name>V8. Обработка ошибок и логгирование</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>8.1. Verify that the application does not output error messages or stack traces containing sensitive data that could assist an attacker, including session id, software/framework versions and personal information.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="8">
+			<name>V9. Защита данных</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>9.1. Verify that all forms containing sensitive information have disabled client side caching, including autocomplete features.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="9">
+			<name>V10. Связь</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>10.1. Verify that a path can be built from a trusted CA to each Transport Layer Security (TLS) server certificate, and that each server certificate is valid.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="10">
+			<name>V11. Конфигурация безопасности HTTP</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>11.1. Verify that the application accepts only a defined set of required HTTP request methods, such as GET and POST are accepted, and unused methods (e.g. TRACE, PUT, and DELETE) are explicitly blocked.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="11">
+			<name>V13. Вредоносные элементы управления</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>no</l1>
+					<l2>no</l2>
+					<l3>yes</l3>
+					<description>13.1. Verify all malicious activity is adequately sandboxed, containerized or isolated to delay and deter attackers from attacking other applications.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="12">
+			<name>V15. Бизнес-логика</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>no</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>15.1. Verify the application will only process business logic flows in sequential step order, with all steps being processed in realistic human time, and not process out of order, skipped steps, process steps from another user, or too quickly submitted transactions.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="13">
+			<name>V16. Файлы и ресурсы</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>16.1. Verify that URL redirects and forwards only allow whitelisted destinations, or show a warning when redirecting to potentially untrusted content.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="14">
+			<name>V17. Мобильная область</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>17.1. Verify that ID values stored on the device and retrievable by other applications, such as the UDID or IMEI number are not used as authentication tokens.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="15">
+			<name>V18. Веб-сервисы</name>
+			<mandatory>no</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>18.1. Verify that the same encoding style is used between the client and the server.</description>
+				</measure>
+			</measures>
+		</area>
+		<area no="16">
+			<name>V19. Конфигурация</name>
+			<mandatory>yes</mandatory>
+			<numberofmeasures>1</numberofmeasures>
+			<measures>
+				<measure no="1">
+					<l1>yes</l1>
+					<l2>yes</l2>
+					<l3>yes</l3>
+					<description>19.1. All components should be up to date with proper security configuration(s) and version(s). This should include removal of unneeded configurations and folders such as sample applications, platform documentation, and default or example users.</description>
+				</measure>
+			</measures>
+		</area>
+	</areas>
+    
+</standard>
